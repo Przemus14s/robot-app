@@ -3,20 +3,17 @@ package example.com;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.event.KeyEvent;
-import java.awt.event.KeyListener;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
-import java.lang.reflect.Type;
-import java.security.Key;
 import java.util.Scanner;
 
-public class Main2 {
+public class Example2 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         try {
             Robot robot = new Robot();
-//            robot.delay(5000);
+            robot.delay(5000);
 //            robot.keyPress(KeyEvent.VK_1);
 //            robot.keyRelease(KeyEvent.VK_1);
 //            robot.delay(500);
@@ -52,8 +49,8 @@ public class Main2 {
         char[][] polishChars = {{'Ą', 'A'}, {'Ć', 'C'}, {'Ę', 'E'}, {'Ż', 'Z'}, {'Ź', 'Z'}, {'Ń', 'N'}, {'Ó', 'O'}, {'Ś', 'S'}, {'Ł', 'L'}};
         boolean isPolish = false;
         for (int i = 0; i < text.length(); i++) {
-            for (int j = 0 ; j < polishChars.length; j++){
-                if (text.charAt(i) == polishChars[j][0]){
+            for (int j = 0; j < polishChars.length; j++) {
+                if (text.charAt(i) == polishChars[j][0]) {
                     isPolish = true;
                     robot.keyPress(KeyEvent.VK_ALT_GRAPH);
                     robot.keyPress(polishChars[j][1]);
@@ -64,7 +61,7 @@ public class Main2 {
                 }
 
             }
-            if (!isPolish){
+            if (!isPolish) {
                 robot.keyPress(text.charAt(i));
                 robot.keyRelease(text.charAt(i));
                 robot.delay(500);
@@ -73,7 +70,7 @@ public class Main2 {
 
     }
 
-    public static void runProgram(Robot robot, String program){
+    public static void runProgram(Robot robot, String program) {
         robot.keyPress(KeyEvent.VK_WINDOWS);
         robot.keyPress(KeyEvent.VK_R);
         robot.keyRelease(KeyEvent.VK_WINDOWS);
