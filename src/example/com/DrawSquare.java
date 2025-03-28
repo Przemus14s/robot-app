@@ -3,7 +3,7 @@ package example.com;
 import java.awt.*;
 import java.awt.event.InputEvent;
 
-public class Example4 {
+public class DrawSquare {
     public static void main(String[] args) throws AWTException {
 
         Robot robot = new Robot();

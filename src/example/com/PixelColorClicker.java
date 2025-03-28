@@ -3,7 +3,7 @@ package example.com;
 import java.awt.*;
 import java.awt.event.InputEvent;
 
-public class Example3 {
+public class PixelColorClicker {
     public static void main(String[] args) throws AWTException {
         Robot robot = new Robot();
         Color green = new Color(75, 219, 106);

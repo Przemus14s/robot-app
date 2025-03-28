@@ -1,26 +1,17 @@
 package example.com;
 
 import java.awt.*;
-import java.awt.event.InputEvent;
 import java.awt.event.KeyEvent;
 
-public class Example6 {
+public class AutomatedTyping {
     public static void main(String[] args) throws AWTException {
         Robot robot = new Robot();
         robot.delay(3000);
 
-        robot.keyPress(KeyEvent.VK_CONTROL);
-        robot.keyPress(KeyEvent.VK_T);
-        robot.keyRelease(KeyEvent.VK_T);
-        robot.keyRelease(KeyEvent.VK_CONTROL);
-        robot.delay(1000);
+        String text = "Automatyczne pisanie z użyciem klasy Robot!";
 
-        String url = "https://www.google.com";
-        typeText(robot, url);
-        robot.keyPress(KeyEvent.VK_ENTER);
-        robot.keyRelease(KeyEvent.VK_ENTER);
-
-        System.out.println("Nowa karta została otwarta i załadowano Google!");
+        typeText(robot, text);
+        System.out.println("Tekst został wpisany automatycznie!");
     }
 
     public static void typeText(Robot robot, String text) {
@@ -35,3 +26,4 @@ public class Example6 {
         }
     }
 }
+

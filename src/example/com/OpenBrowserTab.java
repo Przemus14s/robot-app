@@ -3,15 +3,23 @@ package example.com;
 import java.awt.*;
 import java.awt.event.KeyEvent;
 
-public class Example5 {
+public class OpenBrowserTab {
     public static void main(String[] args) throws AWTException {
         Robot robot = new Robot();
         robot.delay(3000);
 
-        String text = "Automatyczne pisanie z użyciem klasy Robot!";
+        robot.keyPress(KeyEvent.VK_CONTROL);
+        robot.keyPress(KeyEvent.VK_T);
+        robot.keyRelease(KeyEvent.VK_T);
+        robot.keyRelease(KeyEvent.VK_CONTROL);
+        robot.delay(1000);
 
-        typeText(robot, text);
-        System.out.println("Tekst został wpisany automatycznie!");
+        String url = "https://www.google.com";
+        typeText(robot, url);
+        robot.keyPress(KeyEvent.VK_ENTER);
+        robot.keyRelease(KeyEvent.VK_ENTER);
+
+        System.out.println("Nowa karta została otwarta i załadowano Google!");
     }
 
     public static void typeText(Robot robot, String text) {
@@ -26,4 +34,3 @@ public class Example5 {
         }
     }
 }
-

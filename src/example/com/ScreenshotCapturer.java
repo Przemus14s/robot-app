@@ -8,7 +8,7 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Example2 {
+public class ScreenshotCapturer {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         try {

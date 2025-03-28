@@ -2,7 +2,7 @@ package example.com;
 
 import java.util.Random;
 
-public class Example {
+public class RandomNumberGenerator {
     public static void main(String[] args) {
         Random random = new Random();
 
